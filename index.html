@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Voting DApp (CB048)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Blockchain Voting DApp <span style="font-size: 18px; color: #666;">(CB048)</span></h1>
+
+    <div id="addCandidateSection">
+        <h2>Add Candidate Details</h2>
+        <label for="candidateName">Name:</label>
+        <input type="text" id="candidateName" placeholder="Enter candidate name"><br><br>
+        <label for="candidateId">ID:</label>
+        <input type="text" id="candidateId" placeholder="Enter candidate ID"><br><br>
+        <button onclick="addCandidate()">Add Candidate</button>
+    </div>
+
+    <div id="showCandidatesSection">
+        <h2>All Candidates</h2>
+        <button onclick="showCandidates()">Show Candidates</button>
+        <ul id="candidatesList"></ul>
+    </div>
+
+    <div id="voteSection">
+        <h2>Cast Your Vote</h2>
+        <label for="voteId">Candidate ID:</label>
+        <input type="text" id="voteId" placeholder="Enter ID to vote"><br><br>
+        <button onclick="vote()">Vote</button>
+        <p id="voteMessage"></p>
+    </div>
+
+    <div id="getCandidateSection">
+        <h2>Get Candidate Info</h2>
+        <label for="getCandidateId">Candidate ID:</label>
+        <input type="text" id="getCandidateId" placeholder="Enter ID to fetch details"><br><br>
+        <button onclick="getCandidateDetails()">Get Details</button>
+        <div id="candidateDetails"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
